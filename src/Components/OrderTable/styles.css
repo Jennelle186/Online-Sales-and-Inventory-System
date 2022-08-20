@@ -1,0 +1,87 @@
+/* .App {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+  /* Styles go here */
+
+
+  /* CSS FOR THE PRINT.JS, THIS IS THE DESIGN FOR PRINTING THE ORDER RECEIPT */
+  .page-footer {
+    display: none;
+  }
+  
+  .page-header {
+    display: none;
+  }
+
+
+  .page {
+    page-break-after: always;
+    /* margin-bottom: 1rem; */
+  
+    /* border: 3px solid #73ad21; */
+  }
+  
+  @page {
+    margin: 20mm;
+  }
+  
+  @media print {
+
+
+    .App {
+        font-family: sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+      }
+
+     
+
+    .page-header,
+    .page-header-space {
+      height: 100px;
+    }
+    
+    .page-footer,
+    .page-footer-space {
+      height: 50px;
+    }
+   
+    .page-header {
+        position: fixed;
+        top: 0mm;
+        width: 100%;
+        display: inline;
+        /* border-bottom: 1px solid black; for demo
+        background: white; /* for demo */
+      }
+
+      .page-footer {
+        position: fixed;
+        /* bottom: 1.5rem; */
+        width: 100%;
+        display: inline;
+      }
+      
+    thead {
+      display: table-header-group;
+    }
+    tfoot {
+      display: table-footer-group;
+    }
+  
+   .button {
+      display: none;
+    }
+  
+    body {
+      margin: 0;
+    }
+  }
+  
