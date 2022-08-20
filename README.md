@@ -41,6 +41,8 @@ You may download it here: https://drive.google.com/file/d/1WOHd12aIlEatNaarHFP91
 
 ## How to deploy the project
 
+Before continuing with the steps below: Enter this on the terminal "npm i -D env-cmd". This installs the package for the .env.local API keys to be recognized when deployed on Firebase Hosting
+
 1. From the Visual Studio Code terminal, enter these “npm i -g firebase-tools”
 
 2. Enter “Firebase login”. You need to be logged in to your Gmail account that is
@@ -64,9 +66,9 @@ connected with your Firebase project.
 
 11. You will be asked with the questions, "Set up automatic builds?", Enter "no"
 
-12. Enter "npm run build" and wait for it to load. This might take a while
+12. Enter "npm run build:deploy" and wait for it to load. This might take a while
 
-13. Enter "Firebase deploy" and wait for the message that says "Deploy complete!" along with the links for the project console and the hostung URL. 
+13. Wait for the message that says "Deploy complete!" along with the links for the project console and the hostung URL. 
 
 14. Click on the hosting URL to view the hosted website.
 
