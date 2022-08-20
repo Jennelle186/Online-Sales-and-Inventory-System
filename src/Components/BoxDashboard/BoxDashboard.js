@@ -131,13 +131,17 @@ const BoxDashboards = ({ totalAmount }) => {
   // }, []);
 
   //this filter not working
-  const newProduct = product.filter((item) => {
-    return Object.values(item.colorMap).every((color) => color < 10);
-  });
+  // const newProduct = product.filter((item) => {
+  //   return Object.values(item.colorMap).every((color) => color < 10);
+  // });
+
+  const limitStock = 10;
 
   //use this for filtering the stocks less than 10
   const result = product.reduce((r, o) => {
-    const colorMap = Object.entries(o.colorMap).filter(([, val]) => val <= 10);
+    const colorMap = Object.entries(o.colorMap).filter(
+      ([, val]) => val <= limitStock
+    );
     if (colorMap.length) {
       r.push({
         colorMap: Object.fromEntries(colorMap),
